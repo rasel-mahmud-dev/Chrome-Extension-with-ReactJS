@@ -1,0 +1,11 @@
+body {
+  width: 600px;
+  height: 400px;
+  background: linear-gradient(to right, rgba(255, 102, 102, 0.57), rgba(93, 93, 255, 0.6));
+  font-family: Roboto, serif;
+}
+.App{
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}

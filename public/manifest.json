@@ -1,0 +1,15 @@
+{
+  "name": "Chrome Extension with React ",
+  "description": "Simple Chrome extensions build with reactJS",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Open the popup"
+  },
+  "icons": {
+    "16": "icons/icons192.png",
+    "48": "icons/icons192.png",
+    "128": "icons/icons192.png"
+  }
+}
