@@ -7,9 +7,32 @@
     "default_popup": "index.html",
     "default_title": "Open the popup"
   },
+  "permissions": [
+    "tabs",
+    "bookmarks",
+    "storage",
+    "identity",
+    "nativeMessaging",
+    "contextMenus",
+    "notifications",
+    "activeTab"
+],
+"host_permissions": [
+  "http://*/*",
+  "https://*/*"
+],
   "icons": {
     "16": "icons/icons192.png",
     "48": "icons/icons192.png",
     "128": "icons/icons192.png"
-  }
+  },
+  "background": {
+    "service_worker": "background/background.js"
+},
+"content_scripts": [
+    {
+        "matches": ["<all_urls>"],
+        "js": ["contentScript/contentScript.js"]
+    }
+]
 }

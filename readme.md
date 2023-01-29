@@ -8,7 +8,7 @@
 
 ## Technologies 
 - ReactJS
-- ViteJS
+- Esbuild(Bundler tool)
 
 
 
