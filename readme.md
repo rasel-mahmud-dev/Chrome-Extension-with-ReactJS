@@ -3,6 +3,7 @@
 
 ## Feature 
 - Basic 
+- Send Message React Extenstion to Website Content script
 - Advanced features coming soon.
 
 
