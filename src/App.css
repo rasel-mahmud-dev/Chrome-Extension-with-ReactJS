@@ -1,11 +1,114 @@
 body {
-  width: 600px;
+  width: 250px;
   height: 400px;
-  background: linear-gradient(to right, rgba(255, 102, 102, 0.57), rgba(93, 93, 255, 0.6));
-  font-family: Roboto, serif;
+  background: linear-gradient(to right, rgb(36 126 114 / 72%), rgb(51 51 159 / 96%));
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
+
+
+:root{
+  --bg-gradient: linear-gradient(60deg, rgb(102 248 255 / 57%), rgba(93, 93, 255, 0.6));
+  --shadow-1: 0 3px 8px 0px #50505075
+}
+
+.title{
+  text-align: center;
+  font-weight: 600;
+  font-size: 25px;
+}
+
 .App{
   color: white;
   font-weight: bold;
+}
+
+.btn{
+  border: none;
+  background: var(--bg-gradient);
+  padding: 10px 15px;
+  color: white;
+  box-shadow: var(--shadow-1);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn.inactive{
+  background: linear-gradient(60deg, rgb(102 248 255 / 27%), rgba(93, 93, 255, 0.2)) !important;
+}
+
+.label{
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+}
+.label-file{
+  padding: 5px 0px;
+  font-size: 12px;
+}
+.mb-2{margin-bottom: 5px;}
+.mt-2{margin-top: 5px;}
+.ml-2{margin-left: 5px;}
+.mt-3{margin-top: 10px;}
+.mt-5{margin-top: 20px;}
+.w-full{width: 100%;}
+.flex{display: flex;} 
+.items-center{align-items: center;}
+.justify-center{justify-content: center;}
+.overflow-hidden{
+  overflow: hidden;
+}
+
+.message{
   text-align: center;
+  font-size: 14px;
+  font-weight: 800;
+  color: white;
+  margin-top: 50px;
+}
+.message.error{
+  color: rgb(255, 82, 82);
+}
+
+.bottom-bar{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  column-gap: 10px;
+}
+
+
+.about{
+  height: 100%;
+  overflow-y: auto;
+  padding-bottom: 40px;
+}
+.about-title{
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.about-para{
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(231, 231, 231);
+  margin-top: 10px;
+}
+
+.about::-webkit-scrollbar{
+  background-color: transparent;
+  width: 0;
+  height: 0;
+}
+
+.about::-webkit-scrollbar-thumb{
+  background-color: transparent;
+  width: 0;
+  height: 0;
 }
