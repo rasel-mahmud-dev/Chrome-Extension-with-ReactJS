@@ -7,6 +7,8 @@ import About from "./views/About"
 import { AiOutlineHome } from "react-icons/ai"
 import { BiHelpCircle } from "react-icons/bi"
 
+import Error from "./components/Error"
+
 function App() {
     const [state, dispatch] = useStore()
     const [tab, setTab] = useState(1)
@@ -18,15 +20,7 @@ function App() {
                     <h1 className="title">Auto Fill Input</h1>
                     <Form />
 
-                    {state.response.message && (
-                        <div
-                            className={`message ${
-                                state.response.isError ? "error" : ""
-                            }`}
-                        >
-                            {state.response.message}
-                        </div>
-                    )}
+                    <Error {...state.response} />
                 </div>
             ) : (
                 <About />
@@ -35,14 +29,14 @@ function App() {
             <div className="bottom-bar">
                 <Button
                     onClick={() => setTab(1)}
-                    className="mt-3 w-full flex items-center justify-center"
+                    className={`mt-3 w-full flex items-center justify-center ${tab === 1 ? "active": "inactive"}`}
                 >
                     Home <AiOutlineHome className="ml-2" />
                 </Button>
 
                 <Button
                     onClick={() => setTab(2)}
-                    className="mt-3 w-full flex items-center justify-center"
+                    className={`mt-3 w-full flex items-center justify-center ${tab === 2 ? "active": "inactive"}`}
                 >
                     About <BiHelpCircle className="ml-2" />
                 </Button>

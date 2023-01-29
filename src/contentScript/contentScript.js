@@ -1,33 +1,35 @@
-
 //  received data form backgournd script
-chrome.runtime.onMessage.addListener(
-    async function(data, sender, sendResponse) {
-        console.log(data);
-      if(!data || !data.payload){
-
-        return;
-      }
-
-
-      try{
-        let candidateData = JSON.parse(data.payload)  
-        console.log(candidateData);
-        fillUp(candidateData)
-      } catch(ex){
-        console.log(ex);
-      }
-
-      sendResponse("I got message")
-
+chrome.runtime.onMessage.addListener(async function (
+    data,
+    sender,
+    sendResponse
+) {
+    if (!data) {
+        return
     }
-  );
+
+    if (data.type === "getSiteURL") {
+        sendResponse({...data, response: location.href})
 
 
-  // fill up all input function 
-  function fillUp(data){
+    } else {
+        try {
+            let candidateData = JSON.parse(data.payload)
+            fillUp(candidateData)
+
+            sendResponse({type: "data_full_up_success", message: "Done"})
+
+        } catch (ex) {
+          sendResponse({type: "error", message: ex.message})
+        }
+    }
+})
+
+// fill up all input function
+function fillUp(data) {
     for (let key in data) {
-        let elem = document.getElementById(key) 
-        if(elem && data[key]){
+        let elem = document.getElementById(key)
+        if (elem && data[key]) {
             elem.value = data[key]
         }
     }

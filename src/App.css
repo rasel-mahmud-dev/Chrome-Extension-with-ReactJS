@@ -1,6 +1,8 @@
+
 body {
   width: 250px;
-  height: 400px;
+  height: 500px;
+  overflow-y: scroll;
   background: linear-gradient(to right, rgb(36 126 114 / 72%), rgb(51 51 159 / 96%));
   font-family: 'Montserrat', sans-serif;
   overflow: hidden;
@@ -19,6 +21,12 @@ body {
   text-align: center;
   font-weight: 600;
   font-size: 25px;
+  margin: 20px 0;
+}
+
+h1,h2,h3,h4{
+  margin: 0;
+  padding: 0;
 }
 
 .App{
@@ -37,7 +45,17 @@ body {
 }
 
 .btn.inactive{
-  background: linear-gradient(60deg, rgb(102 248 255 / 27%), rgba(93, 93, 255, 0.2)) !important;
+  background: linear-gradient(60deg, rgb(102 248 255 / 8%), rgba(93, 93, 255, 0.2)) !important;
+  color: rgb(230, 230, 230);
+
+}
+.input{
+  outline: none;
+  border: none;
+}
+.textarea{
+  min-height: 100px;
+  width: 100%;
 }
 
 .label{
@@ -58,33 +76,43 @@ body {
 .flex{display: flex;} 
 .items-center{align-items: center;}
 .justify-center{justify-content: center;}
+.justify-between{justify-content: space-between;}
 .overflow-hidden{
   overflow: hidden;
 }
 
 .message{
-  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5px;
   font-size: 14px;
-  font-weight: 800;
+  font-weight: 600;
   color: white;
   margin-top: 50px;
+  background: linear-gradient(60deg, rgb(102 248 255 / 57%), rgba(93, 93, 255, 0.6));
+  border-radius: 6px;
+  padding: 20px;
 }
 .message.error{
-  color: rgb(255, 82, 82);
+  color: rgb(255 248 248);
+  background: rgb(255 49 49 / 25%);
 }
 
 .bottom-bar{
   position: fixed;
-  width: 100%;
-  bottom: 0;
+  width: 95%;
+  bottom: 2%;
   display: flex;
   column-gap: 10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 
 .about{
-  height: 100%;
-  overflow-y: auto;
+
   padding-bottom: 40px;
 }
 .about-title{
@@ -96,19 +124,17 @@ body {
 .about-para{
   text-align: center;
   font-size: 14px;
+  word-break: break-all;
   font-weight: 400;
   color: rgb(231, 231, 231);
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
-.about::-webkit-scrollbar{
-  background-color: transparent;
-  width: 0;
-  height: 0;
-}
 
-.about::-webkit-scrollbar-thumb{
-  background-color: transparent;
-  width: 0;
-  height: 0;
+.about h3{
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.about img{
+  width: 100%;
 }
