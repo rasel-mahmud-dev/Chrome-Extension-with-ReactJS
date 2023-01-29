@@ -3,7 +3,7 @@
 
 ## Feature 
 - Basic 
-- Send Message React Extenstion to Website Content script
+- Auto fill Most Input
 - Advanced features coming soon.
 
 
@@ -18,4 +18,4 @@ Just build and select dist directory to install this extension
 
 
 #### Preview 
-![](thumbs/2023-01-29_005647.jpg)
+![](thumbs/2023-01-29_005647.webp)
