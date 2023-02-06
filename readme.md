@@ -78,5 +78,10 @@ You can only change value for apply different candidate user.
 ```
 
 
+NB: This extension only works for this types website -
+http://[departmentName].teletalk.com.bd/application.php
+
+
+
 #### Preview 
 ![](thumbs/2023-01-29_005647.webp)
