@@ -1,34 +1,3 @@
-## Chrome Extension with ReactJS
-
-
-## Feature 
-- Basic 
-- Auto fill Most Input
-- Advanced features coming soon.
-
-
-## Technologies 
-- ReactJS
-- Esbuild(Bundler tool)
-
-
-### Installation  🎁🎁🎁
-```shell
-npm install 
-npm run build 
-```
-or  
-Just extract dist.rar and load unpack this dir
-
-
-
-### Data Format  ✨✨✨
-
-You have to keep original key name, because this kay name use as input id,
-You can only change value for apply different candidate user.
-
-```json lines
-//json data format
 {
   "dep_status": "5",
   "name": "MD. Test MIAH",
@@ -75,8 +44,3 @@ You can only change value for apply different candidate user.
   "hsc_year": "2011",
   "other_exp[0][value]": "1"
 }
-```
-
-
-#### Preview 
-![](thumbs/2023-01-29_005647.webp)
